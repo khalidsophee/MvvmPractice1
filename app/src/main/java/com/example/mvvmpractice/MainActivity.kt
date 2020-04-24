@@ -17,6 +17,7 @@ class MainActivity : AppCompatActivity() {
           viewModel = ViewModelProviders.of(this).get(MyVM::class.java)
           val randomm: LiveData<Rds>
           randomm=viewModel.getNumber()
+
             val nameObserver = Observer<Rds> { newName ->
                 Log.v("CHECKING","we are in observer")
              // Update the UI, in this case, a TextView.
